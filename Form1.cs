@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Modbus;
 using System.Windows.Forms;
 
 namespace ParamSieci19
