@@ -18,7 +18,9 @@ namespace ParamSieci19
 
         public void connectAndrzej()
         {
+            //ModbusClient modbusClient = new ModbusClient("COM1");
             ModbusClient modbusX = new ModbusClient("127.0.0.1", 502);
+            modbusX.ConnectionTimeout = 500;
             modbusX.Connect();
             int[] readHoldingRegisters = modbusX.ReadHoldingRegisters(0, 10);
             foreach (int i in readHoldingRegisters)
@@ -34,6 +36,7 @@ namespace ParamSieci19
 
         private void button1_Click(object sender, EventArgs e)
         {
+            connectAndrzej();
             textBox1.Text = "ala ma kota";
 
         }
